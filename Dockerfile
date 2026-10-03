@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY package.json ./
-RUN npm install --omit=dev && npx remotion browser ensure
+RUN npm install --omit=dev && node -e "import('@remotion/renderer').then((r) => r.ensureBrowser())"
 COPY server.mjs ./
 ENV PORT=8080 CONCURRENCY=8
 EXPOSE 8080
