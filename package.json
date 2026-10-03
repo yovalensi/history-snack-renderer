@@ -1,0 +1,9 @@
+{
+  "name": "history-snack-renderer",
+  "private": true,
+  "type": "module",
+  "description": "Generic Remotion render worker for Bunny Magic Containers. Holds no story code: it renders from a bundle URL and uploads the result to Bunny storage.",
+  "dependencies": {
+    "@remotion/renderer": "4.0.529"
+  }
+}
